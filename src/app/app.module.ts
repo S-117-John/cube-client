@@ -14,14 +14,23 @@ import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { MenuComponent } from './system/menu/menu.component';
-
-
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { ModuleComponent } from './system/module/module.component';
+import { ConfigComponent } from './system/config/config.component';
+import { DictTypeComponent } from './system/dict-type/dict-type.component';
+import { AreaComponent } from './system/area/area.component';
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+    ModuleComponent,
+    ConfigComponent,
+    DictTypeComponent,
+    AreaComponent,
 
 
   ],
@@ -33,7 +42,10 @@ registerLocaleData(zh);
     BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
-    NzMenuModule
+    NzMenuModule,
+    NzTableModule,
+    NzButtonModule,
+    NzPageHeaderModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
