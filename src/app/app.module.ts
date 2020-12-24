@@ -21,6 +21,9 @@ import { ModuleComponent } from './system/module/module.component';
 import { ConfigComponent } from './system/config/config.component';
 import { DictTypeComponent } from './system/dict-type/dict-type.component';
 import { AreaComponent } from './system/area/area.component';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzFormModule } from 'ng-zorro-antd/form';
 registerLocaleData(zh);
 
 @NgModule({
@@ -46,6 +49,9 @@ registerLocaleData(zh);
     NzTableModule,
     NzButtonModule,
     NzPageHeaderModule,
+    NzSpaceModule,
+    NzModalModule,
+    NzFormModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
