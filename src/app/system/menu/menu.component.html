@@ -55,8 +55,106 @@
   </tbody>
 </nz-table>
 
-<nz-modal [(nzVisible)]="isVisible" nzTitle="新增菜单" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+<nz-modal nzWidth="900px" [(nzVisible)]="isVisible" nzTitle="新增菜单" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
   <ng-container *nzModalContent>
+    <form nz-form class="ant-advanced-search-form">
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-label>上级菜单</nz-form-label>
+            <nz-form-control>
+              <nz-tree-select nzShowSearch>
+              </nz-tree-select>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-label >菜单名称</nz-form-label>
+            <nz-form-control>
+              <input nz-input />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-label>链接</nz-form-label>
+            <nz-form-control>
+              <input nz-input   />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-label >归属模块</nz-form-label>
+            <nz-form-control>
+              <nz-select>
+                <nz-option nzValue="core" nzLabel="核心"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-label>目标</nz-form-label>
+            <nz-form-control>
+              <input nz-input   />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-label>排序</nz-form-label>
+            <nz-form-control>
+              <nz-input-number  [nzMin]="1" [nzMax]="999" [nzStep]="1"></nz-input-number>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-label>权限标识</nz-form-label>
+            <nz-form-control>
+              <input nz-input   />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-label >菜单图标</nz-form-label>
+            <nz-form-control>
+              <input nz-input />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-label>菜单权重</nz-form-label>
+            <nz-form-control>
+              <input nz-input   />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-label >可见</nz-form-label>
+            <nz-form-control>
+              <nz-radio-group>
+                <label nz-radio nzValue="A">显示</label>
+                <label nz-radio nzValue="B">隐藏</label>
+              </nz-radio-group>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+    </form>
 
   </ng-container>
 </nz-modal>
