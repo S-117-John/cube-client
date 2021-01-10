@@ -30,6 +30,7 @@ import { NzTreeSelectModule } from 'ng-zorro-antd/tree-select';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { CodeComponent } from './development/code/code.component';
 registerLocaleData(zh);
 
 @NgModule({
@@ -40,6 +41,7 @@ registerLocaleData(zh);
     ConfigComponent,
     DictTypeComponent,
     AreaComponent,
+    CodeComponent,
 
 
   ],
