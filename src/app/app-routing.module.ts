@@ -6,6 +6,7 @@ import {ConfigComponent} from './system/config/config.component';
 import {DictTypeComponent} from './system/dict-type/dict-type.component';
 import {AreaComponent} from './system/area/area.component';
 import {CodeComponent} from './development/code/code.component';
+import {CodeConfigComponent} from './development/code-config/code-config.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'sys/dictType', component: DictTypeComponent},
   { path: 'sys/area', component: AreaComponent},
   { path: 'dev/code', component: CodeComponent},
+  { path: 'dev/codeConfig', component: CodeConfigComponent},
 
 ];
 

@@ -1,0 +1,131 @@
+<nz-tabset>
+  <nz-tab nzTitle="基本信息">
+    <form nz-form >
+      <nz-form-item>
+        <nz-form-label>表名</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your username!">
+          <input nz-input formControlName="fieldA" placeholder="input placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>表说明</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <input nz-input formControlName="filedB" placeholder="input placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>实体类名称</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <input nz-input formControlName="filedB" placeholder="input placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>功能作者</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <input nz-input formControlName="filedB" placeholder="input placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control>
+          <button nz-button nzType="primary">Submit</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-tab>
+  <nz-tab nzTitle="字段信息">
+    <nz-table #groupingTable [nzData]="listOfData" nzBordered nzSize="middle" [nzScroll]="{ x: '1200px', y: '240px' }">
+      <thead>
+      <tr>
+        <th colspan="8">字段</th>
+        <th colspan="3">列表</th>
+        <th colspan="7">表单</th>
+      </tr>
+      <tr>
+        <th>列名</th>
+        <th>列说明</th>
+        <th>字段类型</th>
+        <th>属性类型</th>
+        <th>属性名称</th>
+        <th>主键</th>
+        <th>插入</th>
+        <th>更新</th>
+        <th>列表</th>
+        <th>查询</th>
+        <th>匹配方式</th>
+        <th>编辑</th>
+        <th>必填</th>
+        <th>控件类型</th>
+        <th>栅格</th>
+        <th>新行</th>
+        <th>字典类型</th>
+        <th>字段验证</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of groupingTable.data">
+        <td nzLeft>{{ data.name }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.street }}</td>
+        <td>{{ data.building }}</td>
+        <td>{{ data.number }}</td>
+        <td>{{ data.companyAddress }}</td>
+        <td>{{ data.companyName }}</td>
+        <td>{{ data.companyName }}</td>
+        <td>{{ data.companyName }}</td>
+        <td>{{ data.companyName }}</td>
+        <td>{{ data.companyName }}</td>
+        <td>{{ data.companyName }}</td>
+        <td>{{ data.companyName }}</td>
+        <td>{{ data.companyName }}</td>
+        <td>{{ data.companyName }}</td>
+        <td>{{ data.companyName }}</td>
+        <td>{{ data.companyName }}</td>
+        <td nzRight>{{ data.gender }}</td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </nz-tab>
+  <nz-tab nzTitle="生成信息">
+    <form nz-form >
+      <nz-form-item>
+        <nz-form-label>生成模板</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your username!">
+          <nz-select ngModel="lucy">
+            <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+            <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>生成包路径</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <input nz-input formControlName="filedB" placeholder="input placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>生成模块名</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <input nz-input formControlName="filedB" placeholder="input placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>生成功能名</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <input nz-input formControlName="filedB" placeholder="input placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>生成基础路径</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <input nz-input formControlName="filedB" placeholder="input placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control>
+          <button nz-button nzType="primary">Submit</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-tab>
+</nz-tabset>

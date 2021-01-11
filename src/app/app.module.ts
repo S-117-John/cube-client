@@ -31,6 +31,8 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { CodeComponent } from './development/code/code.component';
+import { CodeConfigComponent } from './development/code-config/code-config.component';
+import {NzTabsModule} from 'ng-zorro-antd/tabs';
 registerLocaleData(zh);
 
 @NgModule({
@@ -42,6 +44,7 @@ registerLocaleData(zh);
     DictTypeComponent,
     AreaComponent,
     CodeComponent,
+    CodeConfigComponent,
 
 
   ],
@@ -66,7 +69,8 @@ registerLocaleData(zh);
     ReactiveFormsModule,
     NzSelectModule,
     NzInputNumberModule,
-    NzRadioModule
+    NzRadioModule,
+    NzTabsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
